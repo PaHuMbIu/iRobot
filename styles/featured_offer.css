@@ -1,0 +1,128 @@
+.featured_offer {
+    position: relative;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    margin-bottom: 52px;
+
+    cursor: pointer;
+}
+
+.featured_banner_desktop {
+    object-fit: cover;
+    height: 726px;
+    width: 100%;
+}
+
+.featured_banner_mobile {
+    display: none;
+}
+
+.offer_content {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: clamp(100px, 100%, 608px);
+    height: 726px;
+
+    padding-left: 120px;
+}
+
+.offer_tag_container {
+    width: clamp(60px, 100%, 165px);
+}
+
+.offer_header {
+    font-size: 48px;
+    color: #ffffff;
+
+    margin: 0 0 18px 0;
+}
+
+.offer_description {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+
+    margin-bottom: 20px;
+}
+
+.cta_link {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+
+    width: fit-content;
+    border-bottom: 1px solid #657e6e;
+    padding-bottom: 2px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .offer_content {
+        padding-left: 30px;
+    }
+
+    .offer_header {
+        font-size: 33px;
+        width: clamp(100px, 100%, 420px);
+    }
+
+    .offer_description {
+        width: clamp(100px, 100%, 400px);
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .featured_offer {
+        display: block;
+    }
+
+    .featured_banner_desktop {
+        display: none;
+    }
+
+    .featured_banner_mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .offer_content {
+        position: static;
+
+        justify-content: flex-start;
+        width: 100%;
+        height: fit-content;
+
+        padding: 30px 20px 16px 20px;
+        box-sizing: border-box;
+    }
+
+    .offer_content::after {
+        content: '';
+        border-bottom: 2px solid #e2e3e6;
+        padding-top: 20px;
+    }
+
+    .offer_header {
+        color: #343A40;
+        width: 100%;
+    }
+
+    .offer_description {
+        width: 100%;
+        color: #343A40;
+    }
+
+    .cta_link {
+        color: #447355;
+    }
+
+}

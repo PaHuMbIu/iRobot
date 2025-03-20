@@ -1,0 +1,38 @@
+body, html {
+    scrollbar-gutter: stable;
+    font-family: PT Sans, Arial, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+/* Common */
+
+ul, li, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form */
+
+input, textarea, button, select {
+    background-color: transparent;
+}
+
+/* Other */
+
+.hidden {
+    display: none !important;
+}
+
+.visibility {
+    visibility: visible !important;
+}
+
+.scroll_hidden {
+    overflow-y: hidden;
+}

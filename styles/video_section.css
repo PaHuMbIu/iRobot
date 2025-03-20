@@ -1,0 +1,134 @@
+.video_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+    margin: 0 20px 64px;
+}
+
+.video_section > h2 {
+    font-size: 40px;
+    color: #343A40;
+
+    margin-bottom: 26px;
+}
+
+.videos_container {
+    display: flex;
+    justify-content: center;
+    width: clamp(100px, 100%, 2060px);
+
+    overflow: hidden;
+}
+
+.slider_video_track {
+    display: flex;
+    touch-action: pan-y;
+}
+
+.video_card {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc((100% - 2 * 20px) / 3);
+
+    padding-right: 20px;
+}
+
+.video_card > video {
+    width: 100%;
+    height: auto;
+
+    border-bottom: 1px solid #000000;
+}
+
+.content_block {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 74px 20px 20px 20px;
+
+    pointer-events: none;
+}
+
+.video_caption {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.price {
+    color: #ffffff;
+    font-weight: 400;
+    margin: 15px 0 20px 0;
+}
+
+.content_block > a {
+    color: #ffffff;
+    text-decoration: none;
+
+    pointer-events: auto;
+}
+
+.content_block > a::after {
+    display: flex;
+    content: '';
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+    padding-top: 2px;
+}
+
+.video_pagination_circles {
+    display: none !important;
+}
+
+@media screen and (max-width: 1440px) {
+
+    .video_section > h2 {
+        font-size: 30px;
+    }
+
+    .video_caption {
+        font-size: 40px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .slider_video_track {
+        transition: transform .5s;
+
+        margin-bottom: 35px;
+    }
+
+    .video_card {
+        flex-shrink: 0;
+        flex-basis: calc((100% - 20px) / 2);
+    }
+
+    .video_caption {
+        font-size: 33px;
+    }
+
+    .video_pagination_circles {
+        display: flex !important;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .video_card {
+        flex-basis: 100%;
+    }
+
+}
