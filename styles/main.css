@@ -16,6 +16,7 @@ ul, li, ol {
 
 input, button {
     background-color: transparent;
+    border: none;
 }
 
 .hidden {
