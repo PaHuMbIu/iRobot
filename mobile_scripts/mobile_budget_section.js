@@ -10,5 +10,3 @@ showProductsBtnEl.addEventListener('click', () => {
         toggleEl.classList.toggle('hidden');
     });
 });
-
-

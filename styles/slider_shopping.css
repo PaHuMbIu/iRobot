@@ -14,11 +14,10 @@
 .slider_shopping_track {
     display: flex;
 
-    transition: transform .5s;
-
     padding: 0 18px;
     margin-bottom: 45px;
 
+    transition: transform .5s;
     touch-action: pan-y;
 }
 

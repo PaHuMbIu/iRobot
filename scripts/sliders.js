@@ -101,10 +101,10 @@ const configureSlider = ({
     updateSlideWidth();
 
     const paginationCircles = slidesEls.map(() => {
-        const li = document.createElement('li');
-        li.classList.add('pagination_circle');
-        sliderPaginationEl.append(li);
-        return li;
+        const ol = document.createElement('ol');
+        ol.classList.add('pagination_circle');
+        sliderPaginationEl.append(ol);
+        return ol;
     });
     paginationCircles[0].classList.add('circle_active');
 
@@ -201,9 +201,7 @@ const configureSlider = ({
         currentX = e.touches ? e.touches[0].clientX : e.clientX;
         const diff = currentX - startX;
 
-        if (Math.abs(diff) > 5) {
-            hasMoved = true;
-        }
+        if (Math.abs(diff) > 5) hasMoved = true;
 
         const offset = currentSlideIndex.value * slideWidth;
 

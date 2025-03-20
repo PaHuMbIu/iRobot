@@ -47,9 +47,8 @@
 
 /* BUDGET SECTION */
 .budget_header {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+    text-align: center;
+    font-size: 42px;
 
     padding-top: 92px;
     margin: 0 0 40px 0;
@@ -142,15 +141,14 @@
 
     .mobile_product_container {
         width: 100%;
-
         margin-bottom: 56px;
     }
 
 
     .mobile_product {
         position: relative;
-
         width: 100%;
+
         margin-top: 28px;
         padding-bottom: 24px;
     }
@@ -170,6 +168,7 @@
     }
 
     .budget_header {
+        font-size: 28px;
         padding-top: 0;
     }
 
