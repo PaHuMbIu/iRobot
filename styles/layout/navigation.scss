@@ -1,0 +1,513 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/functions' as func;
+@use '../abstracts/mixins' as mix;
+
+.nav {
+    @include mix.flex-center(space-between, center);
+    padding: map-get(vars.$paddings, nav-padding);
+    border-bottom: 2px solid #6cb86a;
+}
+
+.nav_container {
+    width: 100%;
+    @include mix.flex-center(stretch, center);
+    gap: 20px;
+}
+
+.logo {
+    @include mix.icons("others", "logo", 120px, 28px);
+}
+
+.nav_link {
+    white-space: nowrap;
+    @include mix.text-style(large, semibold, color-danger);
+}
+
+.nav_item {
+    white-space: nowrap;
+    @include mix.text-style(large, semibold, color-primary);
+    cursor: pointer;
+}
+
+.select_nav_item {
+    border-bottom: 1px solid #6a768c;
+}
+
+.quick_search {
+    @include mix.flex-center(end, center);
+    width: 100%;
+    gap: 10px;
+}
+
+.search {
+    @include mix.search-string-styles(250px);
+}
+
+.search:focus {
+    border: map-get(vars.$outline-colors, input-focus);
+}
+
+.minicart_icon {
+    @include mix.icons("others", "minicart", 24px, 24px);
+    cursor: pointer;
+}
+
+.mobile_nav_container {
+    display: none;
+}
+
+/* CATEGORIES */
+.popup {
+    position: absolute;
+    z-index: 1000;
+    margin-left: 180px;
+
+    display: none;
+    grid-template-columns:
+        minmax(100px, 300px)
+        minmax(100px, 220px)
+        minmax(100px, 300px)
+        minmax(100px, 330px);
+
+    background-color: map-get(vars.$background-colors, bg-primary);
+}
+
+.popup_active {
+    display: grid;
+}
+
+.last_popup {
+    grid-template-columns:
+        minmax(100px, 300px)
+        minmax(100px, 220px)
+        minmax(100px, 300px);
+}
+
+.menu_container {
+    padding: 60px 0 60px 60px;
+}
+
+.menu_item {
+    position: relative;
+
+    display: inline-block;
+    @include mix.text-style(modal-menu-item, semibold, color-secondary);
+
+    transition: all .2s linear;
+
+    margin: 18px 0 18px 0;
+
+    cursor: pointer;
+}
+
+.menu_item:first-child {
+    margin-top: 0;
+}
+
+.menu_item:last-child {
+    margin-bottom: 0;
+}
+
+.menu_item::after {
+    content: '';
+
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+
+    border-bottom: 2px solid #eaf2e6;
+    width: clamp(10px, 100%, 25px);
+    pointer-events: none;
+}
+
+.menu_item:last-child::after {
+    content: none;
+}
+
+.menu_item:hover {
+    color: map-get(vars.$text-colors, color-primary-hover);
+}
+
+.background_container {
+    @include mix.flex-center(center, stretch);
+}
+
+.background {
+    position: relative;
+
+    width: clamp(20px, 100%, 120px);
+    background-color: map-get(vars.$background-colors, bg-card);
+    border-radius: 12px;
+    margin: 60px 0 60px 90px;
+}
+
+.robots_container {
+    @include mix.flex-center(stretch, center);
+    height: 100%;
+}
+
+.robot {
+    position: absolute;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+}
+
+.robot_active {
+    opacity: 1;
+}
+
+.info_category {
+    padding: 60px 20px;
+}
+
+.info_header {
+    display: flex;
+    flex-direction: column;
+    @include mix.text-style(large, semibold, color-accent);
+}
+
+.info_header::after {
+    content: '';
+    width: clamp(10px, 100%, 160px);
+    border-bottom: 1px solid #e2e3e6;
+
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.info_link {
+    width: fit-content;
+    @include mix.text-style(large, semibold, color-secondary);
+    margin-bottom: 18px;
+    cursor: pointer;
+}
+
+.info_link:hover {
+    text-decoration: underline;
+}
+
+.popup_promo {
+    @include mix.flex-center(center, center);
+    flex-direction: column;
+    background-color: map-get(vars.$background-colors, bg-info);
+}
+
+.promo_header {
+    @include mix.text-style(modal-menu-item, semibold, color-tertiary, center);
+}
+
+.promo_content {
+    @include mix.text-style(large, semibold, color-tertiary, center);
+    padding: 25px;
+}
+
+.promo_btn_container {
+    @include mix.flex-center(center);
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+}
+
+.promo_btn {
+    @include mix.flex-center(center, center);
+    width: clamp(100px, 100%, 160px);
+    height: 50px;
+
+    border-radius: 40px;
+    border: 2px solid #ffffff;
+
+    @include mix.text-style(normal, semibold, color-tertiary);
+    cursor: pointer;
+}
+
+.promo_btn:hover {
+    outline: map-get(vars.$outline-colors, button-hover);
+    transition: all .2s ease-in-out;
+}
+
+@media screen and (max-width: 1440px) {
+    .popup {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .popup {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .mobile_nav_container {
+        display: block;
+        width: 100%;
+    }
+
+    .mobile_nav {
+        @include mix.flex-center(space-between, center);
+        flex-wrap: wrap;
+        padding: 30px 20px;
+    }
+
+    .mobile_nav::after {
+        content: '';
+        border-bottom: 2px solid #6cb86a;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .burger_menu {
+        @include mix.icons("others", "burger", 26px, 26px);
+        cursor: pointer;
+    }
+
+    .mobile_quick_search {
+        position: relative;
+        @include mix.flex-center(center, center);
+        padding: 0 10px 10px 10px;
+    }
+
+    .mobile_search {
+        @include mix.search-string-styles(350px);
+    }
+
+    .drop_down_menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+
+        display: flex;
+
+        width: calc(100% - 55px);
+        max-width: 510px;
+        height: 100%;
+        background-color: map-get(vars.$background-colors, bg-primary);
+
+        transition: transform .4s ease-in-out;
+        transform: translateX(-100%);
+
+        margin-right: 55px;
+
+        overflow: hidden;
+
+        cursor: auto;
+    }
+
+    .mobile_menu_container {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        padding: 20px;
+    }
+
+    .container_close_menu {
+        z-index: 2000;
+
+        @include mix.flex-center(space-between, stretch);
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .container_close_menu::after {
+        content: '';
+        border-bottom: 2px solid #dce9d5;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .btn_back {
+        @include mix.flex-center(stretch, center);
+        @include mix.text-style(large, semibold, color-accent);
+        visibility: hidden;
+        cursor: pointer;
+    }
+    .btn_back::before {
+        content: '';
+        @include mix.icons("others", "arrow_back", 16px, 17px);
+    }
+
+    .close_menu {
+        background-image: url("../../assets/others/close_icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 32px;
+        height: 32px;
+
+        background-color: #518a70;;
+        border-radius: 100%;
+
+        cursor: pointer;
+    }
+
+    .mobile_menu_links {
+        display: inline-block;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .mobile_nav_item {
+        @include mix.flex-center(space-between, stretch);
+        width: 100%;
+        @include mix.text-style(modal-menu-item, semibold, color-secondary);
+        padding-top: 25px;
+
+        cursor: pointer;
+    }
+
+    .mobile_nav_item::after {
+        content: '';
+        @include mix.icons("others", "arrow", 24px, 24px);
+    }
+
+    .container_nav_links::before {
+        content: '';
+        display: flex;
+        border-bottom: 1px solid #e2e3e6;
+        width: 100%;
+
+        padding-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .mobile_header_link {
+        @include mix.text-style(large, semibold, color-secondary);
+    }
+
+    .mobile_link {
+        padding-top: 25px;
+        margin-bottom: 25px;
+    }
+    .mobile_link > a {
+        @include mix.text-style(large, regular, color-secondary);
+        padding-left: 20px;
+    }
+
+    .mobile_selected_language {
+        display: flex;
+        gap: 5px;
+
+        @include mix.text-style(large, regular, color-secondary);
+
+        padding-left: 20px;
+
+        cursor: pointer;
+    }
+    .mobile_selected_language::after {
+        content: '';
+        align-self: center;
+        @include mix.icons("others", "countrySelector", 16px, 16px);
+    }
+
+    .mobile_language {
+        display: flex;
+        gap: 8px;
+
+        @include mix.text-style(normal, regular, color-secondary);
+
+        padding-top: 20px;
+
+        cursor: pointer;
+    }
+    .mobile_language::before {
+        content: '';
+        @include mix.icons("others", "russian-flag", 16px, 16px);
+    }
+
+    .menu_item_container {
+        position: absolute;
+
+        width: 100%;
+        max-width: 490px;
+        height: 100%;
+        background-color: map-get(vars.$background-colors, bg-primary);
+        padding: 50px 20px 20px 0;
+
+        transition: transform .4s ease-in-out;
+        transform: translateX(490px);
+    }
+
+    .menu_content {
+        overflow-y: auto;
+        height: 100%;
+        padding-right: 10px;
+    }
+
+    .menu_shop_title {
+        @include mix.text-style(modal-menu-item, semibold, color-secondary);
+        padding-top: 25px;
+    }
+
+    .mobile_menu_item {
+        padding-top: 25px;
+    }
+
+    .mobile_menu_item > a {
+        @include mix.text-style(large, semibold, color-secondary);
+        cursor: pointer;
+    }
+
+    .mobile_info_header {
+        display: flex;
+        flex-wrap: wrap;
+        @include mix.text-style(large, semibold, color-accent);
+        padding-top: 50px;
+    }
+    .mobile_info_header::after {
+        content: '';
+        border-bottom: 1px solid #e2e3e6;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .mobile_info_link {
+        padding-top: 25px;
+    }
+    .mobile_info_link > a {
+        @include mix.text-style(large, semibold, color-secondary);
+        cursor: pointer;
+    }
+
+    .mobile_promo_header {
+        @include mix.text-style(large, semibold, color-secondary, center);
+        padding-top: 40px;
+    }
+
+    .mobile_promo_content {
+        @include mix.text-style(normal, semibold, color-secondary, center);
+        padding: 10px 0 20px 0;
+    }
+
+    .mobile_btn_container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        margin-bottom: 20px;
+        padding: 0 15px 0 15px;
+    }
+
+    .mobile_promo_btn {
+        width: 100%;
+        height: 55px;
+        border: 2px solid #447355;
+        border-radius: 30px;
+
+        @include mix.text-style(large, semibold, color-accent);
+
+        cursor: pointer;
+    }
+
+    .mobile_promo_btn:hover {
+        transition: outline .2s ease-in-out;
+        outline: map-get(vars.$outline-colors, button-hover);
+    }
+
+}

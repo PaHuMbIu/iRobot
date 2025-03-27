@@ -28,12 +28,12 @@ arrowEls.forEach(arrow => {
 });
 
 // DROPDOWN MENU
-const languageSelection = document.querySelector('.language_selection');
+const languageSelectionEl = document.querySelector('.language_selection');
 const languageSelectionOptionEl = document.querySelector('.language_selection_option');
 
 let handlerDropDownMenuWrapper;
 
-languageSelection.addEventListener('click', () => {
+languageSelectionEl.addEventListener('click', () => {
     languageSelectionOptionEl.classList.toggle('hidden');
 
     handlerDropDownMenuWrapper = e => handlerDropDownMenu(e);

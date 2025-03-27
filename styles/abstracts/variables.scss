@@ -1,0 +1,45 @@
+$text-sizes: (
+    modal-menu-item: 24px,
+    large: 16px,
+    normal: 14px,
+    small: 11px,
+);
+
+$text-weights: (
+    bold: 700,
+    semibold: 600,
+    regular: 400,
+);
+
+$text-colors: (
+    color-primary: #596273,
+    color-secondary: #3C4453,
+    color-tertiary: #ffffff,
+    color-danger: #D0312D,
+    color-accent: #497e5e,
+
+    color-primary-hover: #447355,
+);
+
+$paddings: (
+    header-padding: 0 40px,
+    nav-padding: 30px 40px,
+    input-padding: 10px 35px 10px 10px,
+);
+
+$background-colors: (
+    bg-primary: #ffffff,
+    bg-secondary: #f2f2f2,
+    bg-header: #dce9d5,
+    bg-card: #eaf2e6,
+    bg-info: #6a768c,
+);
+
+$border-colors: (
+    border-contour: 1px solid #d9d9d9,
+);
+
+$outline-colors: (
+    input-focus: 4px solid #d3ead2,
+    button-hover: 6px solid #6b8a82,
+);

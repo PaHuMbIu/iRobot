@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>iRobot</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/other/Irobot.svg">
+    <link rel="icon" href="assets/others/Irobot.svg">
     <!-- STYLES -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/base/reset.css">
+    <link rel="stylesheet" href="styles/layout/header.css">
+    <link rel="stylesheet" href="styles/layout/navigation.css">
     <link rel="stylesheet" href="styles/video_content.css">
     <link rel="stylesheet" href="styles/product_section.css">
     <link rel="stylesheet" href="styles/featured_offer.css">
@@ -27,7 +27,7 @@
 <header class="header">
     <div class="header_container">
         <div class="header_slider_container">
-            <div class="arrow_left arrow"></div>
+            <div class="arrow arrow_left"></div>
             <article class="header_slider">
                 <div class="slider_item slider_item_active">Order by 12/19/24 at 11:59 PM EST for 2-day shipping on all
                     robot orders for delivery by 12/24/24.
@@ -37,7 +37,7 @@
                     <a class="slider_item_link" href="#">Shop Deal</a>
                 </div>
             </article>
-            <div class="arrow_right arrow"></div>
+            <div class="arrow arrow_right"></div>
         </div>
 
         <nav class="header_nav">
@@ -56,13 +56,13 @@
 </header>
 <!-- NAVIGATION -->
 <nav class="nav">
-    <div class="nav_container">
+    <ul class="nav_container">
         <div class="logo"></div>
         <a class="nav_link" href="#">Holiday Savings</a>
-        <div class="nav_item">Shop</div>
-        <div class="nav_item">Explore</div>
-        <div class="nav_item">Parts & Accessories</div>
-    </div>
+        <li class="nav_item">Shop</li>
+        <li class="nav_item">Explore</li>
+        <li class="nav_item">Parts & Accessories</li>
+    </ul>
 
     <div class="quick_search">
         <input class="search" type="text" placeholder="Search">
@@ -108,12 +108,10 @@
                         </li>
                     </ul>
 
-                    <div class="selected_language_container">
-                        <div class="mobile_selected_language">English (United States)</div>
-                        <ul class="list_of_languages hidden">
-                            <li class="mobile_language">Русский (Россия)</li>
-                        </ul>
-                    </div>
+                    <div class="mobile_selected_language">English (United States)</div>
+                    <ul class="list_of_languages hidden">
+                        <li class="mobile_language">Русский (Россия)</li>
+                    </ul>
                 </div>
             </nav>
 
@@ -283,7 +281,7 @@
         <li class="menu_item" href="#">Shop all Robots</li>
     </ul>
 
-    <div class="background_container">
+    <section class="background_container">
         <div class="background">
             <div class="robots_container">
                 <img class="robot robot_active" src="assets/robots/Roomba_j9+_m6.png" alt="robot">
@@ -293,29 +291,27 @@
                 <img class="robot" src="assets/robots/RoombaCombo_PadLifting.png" alt="robot">
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="info_category">
-        <div class="info_category_container">
-            <div class="info_header">Smart Ways to Shop</div>
-            <ul class="info_container">
-                <li class="info_link" href="#">Gift Guide</li>
-                <li class="info_link" href="#">Compare Products</li>
-                <li class="info_link" href="#">Help Me Choose</li>
-                <li class="info_link" href="#">Trade in</li>
-                <li class="info_link" href="#">Why Buy Direct</li>
-                <li class="info_link" href="#">Financing</li>
-            </ul>
-        </div>
-    </div>
+    <section class="info_category">
+        <div class="info_header">Smart Ways to Shop</div>
+        <ul>
+            <li class="info_link" href="#">Gift Guide</li>
+            <li class="info_link" href="#">Compare Products</li>
+            <li class="info_link" href="#">Help Me Choose</li>
+            <li class="info_link" href="#">Trade in</li>
+            <li class="info_link" href="#">Why Buy Direct</li>
+            <li class="info_link" href="#">Financing</li>
+        </ul>
+    </section>
 
-    <div class="popup_promo">
+    <section class="popup_promo">
         <div class="promo_header">Holiday Savings</div>
         <div class="promo_content">Up to $400 off our Roomba® robots for a limited time.</div>
         <div class="promo_btn_container">
             <a class="promo_btn" href="#">Shop now</a>
         </div>
-    </div>
+    </section>
 </div>
 <!-- 2 -->
 <div class="popup">
@@ -327,7 +323,7 @@
         <li class="menu_item" href="#">Busy Family</li>
     </ul>
 
-    <div class="background_container">
+    <section class="background_container">
         <div class="background">
             <div class="robots_container">
                 <img class="robot robot_active" src="assets/robots/roombaCombo.png" alt="robot">
@@ -337,33 +333,31 @@
                 <img class="robot" src="assets/robots/RoombaCombo_PadLifting.png" alt="robot">
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="info_category">
-        <div class="info_category_container">
-            <div class="info_header">Explore More</div>
-            <div class="details-subheader"></div>
-            <ul class="info_container">
-                <li class="info_link" href="#">Deals & Offers</li>
-                <li class="info_link" href="#">Shop all Robots</li>
-                <li class="info_link" href="#">Shop all Parts & Accessories</li>
-                <li class="info_link" href="#">eGift Card</li>
-                <li class="info_link" href="#">iRobot Home App</li>
-                <li class="info_link" href="#">iRobotOS</li>
-            </ul>
-        </div>
-    </div>
+    <section class="info_category">
+        <div class="info_header">Explore More</div>
+        <div class="details-subheader"></div>
+        <ul class="info_container">
+            <li class="info_link" href="#">Deals & Offers</li>
+            <li class="info_link" href="#">Shop all Robots</li>
+            <li class="info_link" href="#">Shop all Parts & Accessories</li>
+            <li class="info_link" href="#">eGift Card</li>
+            <li class="info_link" href="#">iRobot Home App</li>
+            <li class="info_link" href="#">iRobotOS</li>
+        </ul>
+    </section>
 
-    <div class="popup_promo">
+    <section class="popup_promo">
         <div class="promo_header">Need help deciding?</div>
         <div class="promo_content">Answer a few simple questions or compare our product lineup to find the right robot
             for you.
         </div>
         <div class="promo_btn_container">
-            <a class="promo_btn additional_btn" href="#">Help Me Choose</a>
-            <a class="promo_btn additional_btn" href="#">Compare products</a>
+            <a class="promo_btn" href="#">Help Me Choose</a>
+            <a class="promo_btn" href="#">Compare products</a>
         </div>
-    </div>
+    </section>
 </div>
 <!-- 3 -->
 <div class="popup last_popup">
@@ -376,7 +370,7 @@
         <li class="menu_item">Accessory Deals & Offers</li>
     </ul>
 
-    <div class="background_container">
+    <section class="background_container">
         <div class="background">
             <div class="robots_container">
                 <img class="robot robot_active"
@@ -392,19 +386,17 @@
                      alt="robot">
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="info_category">
-        <div class="info_category_container">
-            <div class="info_header">Featured Products</div>
-            <div class="details-subheader"></div>
-            <ul class="info_container">
-                <li class="info_link" href="#">Replenishment Kit for Roomba Combo® and Roomba® e, i, and j series</li>
-                <li class="info_link" href="#">Replacement Dirt Disposal Bags, 3-Pack</li>
-                <li class="info_link" href="#">High-Efficiency Filters for Roomba® e, i, and j series, 3-Pack</li>
-            </ul>
-        </div>
-    </div>
+    <section class="info_category">
+        <div class="info_header">Featured Products</div>
+        <div class="details-subheader"></div>
+        <ul class="info_container">
+            <li class="info_link" href="#">Replenishment Kit for Roomba Combo® and Roomba® e, i, and j series</li>
+            <li class="info_link" href="#">Replacement Dirt Disposal Bags, 3-Pack</li>
+            <li class="info_link" href="#">High-Efficiency Filters for Roomba® e, i, and j series, 3-Pack</li>
+        </ul>
+    </section>
 </div>
 <!-- VIDEO CONTENT -->
 <div class="video_container">
@@ -571,9 +563,10 @@
 </section>
 <!-- MARKETING -->
 <div class="marketing">
-    <img class="marketing_banner_desktop" src="assets/other/Amazon_Accessories_Banner_BlankCenter_Desktop_3000x600.webp"
+    <img class="marketing_banner_desktop"
+         src="assets/others/Amazon_Accessories_Banner_BlankCenter_Desktop_3000x600.webp"
          alt="marketing_banner">
-    <img class="marketing_banner_mobile" src="assets/other/Amazon_Accessories_Banner_Desktop_1500x1500.jpg"
+    <img class="marketing_banner_mobile" src="assets/others/Amazon_Accessories_Banner_Desktop_1500x1500.jpg"
          alt="marketing_banner">
 
     <div class="marketing_content">
@@ -694,12 +687,13 @@
             </div>
 
             <div class="newsletter_input_container">
-                <label class="newsletter_label">Enter your email address below for the latest offers, new products and
+                <label class="newsletter_label" for="newsletterForm">Enter your email address below for the latest
+                    offers, new products and
                     more from iRobot.</label>
-                <div class="newsletter">
+                <form class="newsletter" id="newsletterForm">
                     <input class="newsletter_input" type="text" placeholder="Email address">
                     <button class="btn_sign_up">Sign up</button>
-                </div>
+                </form>
                 <span class="validation_message hidden">A valid email address is required</span>
                 <p class="newsletter_privacy">Offer valid for new email subscribers only and good for one-time use.
                     Discounts

@@ -1,0 +1,166 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/functions" as func;
+
+.header {
+    background-color: map-get(vars.$background-colors, bg-header);
+    padding: map-get(vars.$paddings, header-padding);
+    height: 60px;
+}
+
+.header_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    height: 100%;
+}
+
+.header_slider_container {
+    position: relative;
+    grid-column: 2 / 3;
+
+    @include mix.flex-center(center, center);
+}
+
+.arrow {
+    align-self: center;
+    cursor: pointer;
+}
+
+.arrow_left {
+    @include mix.icons("others", "arrow-left", 16px, 16px);
+}
+
+.arrow_right {
+    @include mix.icons("others", "arrow-right", 16px, 16px);
+}
+
+.header_slider {
+    display: flex;
+    width: clamp(100px, 100%, 450px);
+}
+
+.slider_item {
+    position: absolute;
+
+    width: clamp(100px, 100%, 450px);
+
+    @include mix.text-style(normal, semibold, color-primary, center);
+
+    transition: opacity 500ms linear;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.slider_item_link {
+    @include mix.text-style(normal, semibold, color-primary);
+    text-decoration: underline;
+}
+
+.slider_item_active {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.header_nav {
+    @include mix.flex-center(flex-end, center);
+    gap: 15px;
+}
+
+.header_link {
+    @include mix.flex-center(vertical);
+    gap: 5px;
+}
+
+.header_link:nth-child(3)::before {
+    content: '';
+    @include mix.icons("others", "login", 16px, 16px);
+}
+
+.link {
+    @include mix.text-style(normal, regular, color-primary);
+    cursor: pointer;
+}
+
+.language_selection {
+    @include mix.flex-center(center);
+    cursor: pointer;
+}
+
+.wishlist {
+    @include mix.icons("others", "wishlist", 16px, 16px);
+}
+
+.language_selection:last-child::before {
+    content: '';
+    @include mix.icons("others", "language", 16px, 16px);
+}
+
+.language_selection:last-child::after {
+    content: '';
+    @include mix.icons("others", "countrySelector", 16px, 16px);
+}
+
+.selected_language {
+    @include mix.text-style(normal, regular, color-primary);
+    cursor: pointer;
+}
+
+.language_selection_option {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    z-index: 100;
+
+    background-color: map-get(vars.$background-colors, bg-primary);
+    border: map-get(vars.$border-colors, border-contour);
+
+    padding: 25px 30px;
+    cursor: auto;
+}
+
+.language {
+    display: flex;
+    gap: 8px;
+
+    @include mix.text-style(normal, regular, color-primary);
+    cursor: pointer;
+}
+
+.language::before {
+    content: '';
+    @include mix.icons("others", "russian-flag", 16px, 16px);
+}
+
+@media screen and (max-width: 1600px) {
+
+    .header_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header_slider_container {
+        grid-column: 1;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .header {
+        padding: func.half-padding(map-get(vars.$paddings, header-padding));
+    }
+
+    .header_container {
+        @include mix.flex-center(center);
+    }
+
+    .header_nav {
+        display: none;
+    }
+
+    .slider_item, .slider_item > a {
+        @include mix.text-style(small, semibold, primary, center);
+    }
+
+}

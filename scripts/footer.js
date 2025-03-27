@@ -2,7 +2,8 @@ const btnSignUpEl = document.querySelector('.btn_sign_up');
 const newsletterInputEl = document.querySelector('.newsletter_input');
 const validationMessageEl = document.querySelector('.validation_message');
 
-btnSignUpEl.addEventListener('click', () => {
+btnSignUpEl.addEventListener('click', e => {
+    e.preventDefault();
     const inputValue = newsletterInputEl.value;
     onInput(inputValue);
 });

@@ -12,8 +12,6 @@ closeMenuEl.addEventListener('click', () => {
     document.body.classList.remove('scroll_hidden');
 });
 
-
-
 const mobileNavItemEls = [...document.querySelectorAll('.mobile_nav_item')];
 const menuItemContainerEls = [...document.querySelectorAll('.menu_item_container')];
 const btnBackEl = document.querySelector('.btn_back');
@@ -37,10 +35,7 @@ btnBackEl.addEventListener('click', () => {
     btnBackEl.classList.remove('visibility');
 });
 
-
-
 const mobileSelectedLanguageEl = document.querySelector('.mobile_selected_language');
-const mobileSelectedLanguageEls = document.querySelector('.mobile_selected_language > .hidden');
 const listOfLanguagesEl = document.querySelector('.list_of_languages');
 
 mobileSelectedLanguageEl.addEventListener('click', () => {
