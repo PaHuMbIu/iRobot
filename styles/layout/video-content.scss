@@ -1,0 +1,136 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+@use "../components/play-pause-btn" as play-pause-btn;
+@use "../components/tag" as tag;
+
+.video_container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #000000;
+}
+
+.video_container::before {
+    position: absolute;
+
+    content: '';
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.main_video {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.play_pause_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+
+    @include mix.flex-center(center, center);
+    @include play-pause-btn.play-pause-btn;
+}
+
+.video_content {
+    @include mix.flex-center(center, stretch);
+    flex-direction: column;
+    height: 600px;
+
+    padding: 10px 0 10px 120px;
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+.tag_container {
+    @include tag.tag(100px);
+}
+
+.video_header {
+    width: clamp(10px, 100%, 650px);
+    @include mix.text-style(title-video, semibold, color-tertiary);
+}
+
+.video_description {
+    @include mix.text-style(large, regular, color-tertiary);
+    padding: 15px 0;
+}
+
+.video_btn {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 15px;
+}
+
+.shop_btn {
+    @include mix.flex-center(center, center);
+    border-radius: 40px;
+
+    @include mix.text-style(large, regular, color-tertiary);
+
+    padding: 16px 0 16px 0;
+
+    transition: outline .2s ease-in-out;
+    cursor: pointer;
+    pointer-events: auto;
+
+    &.btn_robot {
+        width: clamp(100px, 100%, 275px);
+        background-color: map-get(vars.$background-colors, bg-accent);
+        outline: #447355;
+    }
+
+    &.btn_accessory:hover,
+    &.btn_robot:hover {
+        outline: map-get(vars.$outline-colors, button-hover);
+    }
+
+    &.btn_accessory {
+        width: clamp(100px, 100%, 300px);
+        border: 2px solid #ffffff;
+    }
+
+}
+
+.offer_valid {
+    @include mix.text-style(large, regular, color-tertiary);
+}
+
+@media screen and (max-width: 1024px) {
+
+    .video_content {
+        padding-left: 30px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .btn_accessory {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+    .video_content {
+        padding-left: 10px;
+    }
+
+    .video_header {
+        @include mix.text-style(bigger, semibold, color-tertiary);
+    }
+
+}

@@ -1,6 +1,6 @@
 @use '../abstracts/variables' as vars;
-@use '../abstracts/functions' as func;
 @use '../abstracts/mixins' as mix;
+@use '../components/search-string' as search-string;
 
 .nav {
     @include mix.flex-center(space-between, center);
@@ -40,7 +40,7 @@
 }
 
 .search {
-    @include mix.search-string-styles(250px);
+    @include search-string.search-string-styles(250px);
 }
 
 .search:focus {
@@ -273,7 +273,7 @@
     }
 
     .mobile_search {
-        @include mix.search-string-styles(350px);
+        @include search-string.search-string-styles(350px);
     }
 
     .drop_down_menu {
@@ -500,7 +500,7 @@
         border: 2px solid #447355;
         border-radius: 30px;
 
-        @include mix.text-style(large, semibold, color-accent);
+        @include mix.text-style(large, semibold, color-accent, center);
 
         cursor: pointer;
     }

@@ -1,0 +1,141 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+.product_section {
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.product_section_container {
+    padding: 0 95px;
+}
+
+.mobile_product_section {
+    display: none;
+}
+
+.products {
+    @include mix.flex-center(space-around, stretch);
+    width: 100%;
+    border-bottom: 3px solid #447354;
+    padding: 25px 0;
+}
+
+.product_link {
+    @include mix.text-style(large, semibold, color-secondary);
+    cursor: pointer;
+
+    &.product_link:hover {
+        text-decoration: underline;
+        color: map-get(vars.$text-colors, color-primary-hover);
+    }
+
+    &.product_link_red {
+        color: map-get(vars.$text-colors, color-danger);
+    }
+}
+
+/* BUDGET SECTION */
+.budget_header {
+    @include mix.text-style(bigger, semibold, color-secondary, center);
+    padding: 90px 0 40px 0;
+}
+
+.budget_cards {
+    @include mix.flex-center(center, stretch);
+    gap: 40px;
+    width: 100%;
+}
+
+.budget_card {
+    height: 215px;
+}
+
+@media screen and (max-width: 1440px) {
+
+    .budget_cards {
+        gap: 20px;
+    }
+
+    .budget_card {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .product_section_container {
+        display: none;
+    }
+
+    .mobile_product_section {
+        display: block;
+        padding-top: 20px;
+    }
+
+    .show_products_btn {
+        position: relative;
+        height: 35px;
+        width: 100%;
+
+        border: 1px solid #447354;
+        border-radius: 20px;
+
+        @include mix.text-style(large, regular, color-accent, center);
+
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+
+    .show_products_btn:hover {
+        outline: 2px solid #6b8a82;
+        transition: all .2s ease-in-out;
+    }
+
+    .toggle {
+        position: absolute;
+        right: 20px;
+        @include mix.text-style(large, regular, color-accent, center);
+    }
+
+    .mobile_product {
+        position: relative;
+        width: 100%;
+
+        margin-top: 25px;
+        padding-bottom: 25px;
+
+        &.mobile_product:first-child {
+            margin-top: 0;
+        }
+
+        &.mobile_product::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            content: '';
+            border-bottom: 1px solid #c7d5cc;
+            width: 100%;
+        }
+    }
+
+    .budget_header {
+        @include mix.text-style(medium-large, semibold, color-secondary, center);
+        padding-top: 20px;
+    }
+
+    .budget_cards {
+        display: block;
+    }
+
+    .budget_card {
+        display: block;
+        height: auto;
+        gap: 0;
+        margin-bottom: 20px;
+    }
+
+}

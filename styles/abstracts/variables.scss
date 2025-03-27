@@ -1,5 +1,8 @@
 $text-sizes: (
+    title-video: 56px,
     modal-menu-item: 24px,
+    bigger: 42px,
+    medium-large: 28px,
     large: 16px,
     normal: 14px,
     small: 11px,
@@ -33,6 +36,8 @@ $background-colors: (
     bg-header: #dce9d5,
     bg-card: #eaf2e6,
     bg-info: #6a768c,
+    bg-danger: #D0312D,
+    bg-accent: #447355,
 );
 
 $border-colors: (

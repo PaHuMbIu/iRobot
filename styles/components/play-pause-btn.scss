@@ -1,0 +1,32 @@
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/variables' as vars;
+
+@mixin play-pause-btn() {
+    border-radius: 100%;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    height: 36px;
+    width: 36px;
+
+    cursor: pointer;
+
+    .play {
+        @include mix.icons( "others", "play", 18px, 18px);
+        margin-left: 2px;
+    }
+
+    .pause {
+        @include mix.icons("others", "pause", 22px, 22px);
+    }
+
+    &.play_pause_btn:hover {
+        transition: all .3s ease-in-out;
+        outline-offset: -2px;
+        outline: 8px solid hsla(0, 0%, 100%, .3);
+    }
+
+    &.play_pause_outline {
+        outline-offset: 3px;
+        outline: 3px solid hsla(0, 0%, 100%, .3);
+    }
+}
