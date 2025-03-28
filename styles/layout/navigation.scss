@@ -4,7 +4,7 @@
 
 .nav {
     @include mix.flex-center(space-between, center);
-    padding: map-get(vars.$paddings, nav-padding);
+    padding: 30px 40px;
     border-bottom: 2px solid #6cb86a;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .search:focus {
-    border: map-get(vars.$outline-colors, input-focus);
+    border: 4px solid #d3ead2;
 }
 
 .minicart_icon {
@@ -84,19 +84,19 @@
 }
 
 .menu_container {
+    display: flex;
+    flex-direction: column;
     padding: 60px 0 60px 60px;
 }
 
 .menu_item {
     position: relative;
+    width: fit-content;
 
-    display: inline-block;
-    @include mix.text-style(modal-menu-item, semibold, color-secondary);
-
+    @include mix.text-style(medium, semibold, color-secondary);
     transition: all .2s linear;
 
     margin: 18px 0 18px 0;
-
     cursor: pointer;
 }
 
@@ -110,7 +110,6 @@
 
 .menu_item::after {
     content: '';
-
     position: absolute;
     bottom: -18px;
     left: 0;
@@ -195,7 +194,7 @@
 }
 
 .promo_header {
-    @include mix.text-style(modal-menu-item, semibold, color-tertiary, center);
+    @include mix.text-style(medium, semibold, color-tertiary, center);
 }
 
 .promo_content {
@@ -223,7 +222,7 @@
 }
 
 .promo_btn:hover {
-    outline: map-get(vars.$outline-colors, button-hover);
+    outline: solid hsla(0, 0%, 100%, .3);
     transition: all .2s ease-in-out;
 }
 
@@ -356,7 +355,7 @@
     .mobile_nav_item {
         @include mix.flex-center(space-between, stretch);
         width: 100%;
-        @include mix.text-style(modal-menu-item, semibold, color-secondary);
+        @include mix.text-style(medium, semibold, color-secondary);
         padding-top: 25px;
 
         cursor: pointer;
@@ -441,7 +440,7 @@
     }
 
     .menu_shop_title {
-        @include mix.text-style(modal-menu-item, semibold, color-secondary);
+        @include mix.text-style(medium, semibold, color-secondary);
         padding-top: 25px;
     }
 
@@ -507,7 +506,7 @@
 
     .mobile_promo_btn:hover {
         transition: outline .2s ease-in-out;
-        outline: map-get(vars.$outline-colors, button-hover);
+        outline: 4px solid hsla(0, 0%, 100%, .3);
     }
 
 }

@@ -1,4 +1,3 @@
-@use '../abstracts/mixins' as mix;
 @use '../abstracts/variables' as vars;
 
 @mixin search-string-styles($width) {
@@ -9,12 +8,12 @@
     border: 4px solid transparent;
     outline: none;
     transition: all .2s ease-in-out;
-    padding: map-get(vars.$paddings, input-padding);
+    padding: 10px 35px 10px 10px;
     background-image: url("../../assets/others/search.svg");
     background-repeat: no-repeat;
     background-position: calc(100% - 10px);
 
     &:focus {
-        border: map-get(vars.$outline-colors, input-focus);
+        border: 4px solid #d3ead2;
     }
 }

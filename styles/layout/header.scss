@@ -1,10 +1,9 @@
 @use "../abstracts/variables" as vars;
 @use "../abstracts/mixins" as mix;
-@use "../abstracts/functions" as func;
 
 .header {
     background-color: map-get(vars.$background-colors, bg-header);
-    padding: map-get(vars.$paddings, header-padding);
+    padding: 0 40px;
     height: 60px;
 }
 
@@ -114,7 +113,7 @@
     z-index: 100;
 
     background-color: map-get(vars.$background-colors, bg-primary);
-    border: map-get(vars.$border-colors, border-contour);
+    border: 1px solid #d9d9d9;
 
     padding: 25px 30px;
     cursor: auto;
@@ -148,7 +147,7 @@
 @media screen and (max-width: 1024px) {
 
     .header {
-        padding: func.half-padding(map-get(vars.$paddings, header-padding));
+        padding: 0 20px;
     }
 
     .header_container {

@@ -46,7 +46,7 @@ const handlerPopup = e => {
 popupEls.forEach(popupEl => {
     const menuItemEls = [...popupEl.querySelectorAll('.menu_item')];
     const robotEls = [...popupEl.querySelectorAll('.robot')];
-    let lastSelectedRobotIndex;
+    let lastSelectedRobotIndex = 0;
 
     menuItemEls.forEach((menuEl, index) => {
         menuEl.addEventListener('mouseenter', () => {

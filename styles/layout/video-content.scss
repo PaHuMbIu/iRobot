@@ -59,7 +59,7 @@
 
 .video_header {
     width: clamp(10px, 100%, 650px);
-    @include mix.text-style(title-video, semibold, color-tertiary);
+    @include mix.text-style(biggest, semibold, color-tertiary);
 }
 
 .video_description {
@@ -91,9 +91,12 @@
         outline: #447355;
     }
 
-    &.btn_accessory:hover,
     &.btn_robot:hover {
-        outline: map-get(vars.$outline-colors, button-hover);
+        outline: 4px solid #58955f;
+    }
+
+    &.btn_accessory:hover {
+        outline: 4px solid hsla(0, 0%, 100%, .3);
     }
 
     &.btn_accessory {

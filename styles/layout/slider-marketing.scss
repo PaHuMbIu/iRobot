@@ -2,67 +2,48 @@
 @use "../abstracts/mixins" as mix;
 
 .slider_marketing {
-    display: flex;
-    justify-content: center;
+    @include mix.flex-center(center, stretch);
     flex-wrap: wrap;
-
-    box-sizing: border-box;
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
 }
 
 .slider_marketing_container {
     position: relative;
-
     width: clamp(100px, 100%, 1100px);
     overflow: hidden;
 }
 
 .slider_marketing_track {
     display: flex;
-
     transition: transform .5s;
     touch-action: pan-y;
 }
 
 .slider_marketing_wrapper {
-    flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: clamp(100px, 100%, 1100px);
-
+    flex-basis: 100%;
     margin-bottom: 20px;
 }
 
 .slide_marketing {
     width: 100%;
     height: auto;
-
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-    user-drag: none;
-    user-select: none;
 }
 
 .slider_marketing_description {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    padding-top: 100px;
-    margin-bottom: 28px;
-
-    color: #3c4453;
+    @include mix.text-style(large, regular, color-secondary);
+    padding-top: 60px;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 768px) {
 
     .slider_marketing_container::after {
-        display: flex;
+        display: block;
         content: '';
         border-bottom: 2px solid #e2e3e6;
         width: 100%;
-        padding-top: 30px;
+        padding-top: 20px;
     }
 
 }
