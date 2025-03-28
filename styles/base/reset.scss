@@ -35,3 +35,15 @@ input, button {
 .scroll_hidden {
     overflow-y: hidden;
 }
+
+.slide_robot,
+.slide_shopping,
+.slide,
+a, {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    user-select: none;
+}

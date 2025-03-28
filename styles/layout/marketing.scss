@@ -1,3 +1,116 @@
 @use "../abstracts/variables" as vars;
 @use "../abstracts/mixins" as mix;
+@use "../components/tag" as tag;
 
+.marketing {
+    display: flex;
+}
+
+.marketing_banner_desktop {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.marketing_banner_mobile {
+    display: none;
+}
+
+.marketing_content {
+    position: absolute;
+    @include mix.flex-center(center stretch);
+    flex-direction: column;
+    width: 100%;
+
+    padding: 10px 0 10px 0;
+}
+
+.marketing_tag {
+    @include tag.tag(100px);
+}
+
+.marketing_header {
+    @include mix.text-style(bigger, semibold, color-secondary, center);
+}
+
+.marketing_description {
+    @include mix.text-style(large, regular, color-secondary, center);
+    padding: 15px 0;
+}
+
+.container_discount_btn {
+    @include mix.flex-center(center, stretch);
+    width: 100%;
+    gap: 30px;
+    margin-bottom: 5px;
+}
+
+.btn_discount {
+    @include mix.flex-center(center, center);
+    width: clamp(50px, 100%, 130px);
+    height: 50px;
+    border-radius: 40px;
+
+    &.background_green {
+        background-color: map-get(vars.$background-colors, bg-accent);
+        @include mix.text-style(large, semibold, color-tertiary);
+    }
+
+    &.background_transparent {
+        border: 2px solid #447355;
+        @include mix.text-style(large, semibold, color-accent);
+    }
+
+    &.background_green:hover,
+    &.background_transparent:hover {
+        outline: 6px solid #cde2cd;
+        transition: all .2s ease-in-out;
+    }
+}
+
+.offer_valid_marketing {
+    @include mix.text-style(large, regular, color-secondary);
+}
+
+@media screen and (max-width: 768px) {
+
+    .marketing {
+        display: block;
+    }
+
+    .marketing_banner_desktop {
+        display: none;
+    }
+
+    .marketing_banner_mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .marketing_content {
+        position: static;
+        padding: 20px;
+    }
+
+    .marketing_content::after {
+        content: '';
+        border-bottom: 2px solid #e2e3e6;
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    .marketing_header {
+        @include mix.text-style(medium-large, semibold, color-secondary, center);
+    }
+
+    .container_discount_btn {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn_discount {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,31 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as vars;
+
+@mixin pagination-circle() {
+    &.slider_pagination {
+        @include mix.flex-center(center, stretch);
+        width: 100%;
+        height: 22px;
+        gap: 24px;
+    }
+
+    .pagination_circle {
+        background-color: map-get(vars.$background-colors, bg-highlight);
+        border-radius: 100%;
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+
+        &.circle_active {
+            box-shadow: 0 0 0 7px #447355;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+
+        .slider_pagination {
+            gap: 18px;
+        }
+
+    }
+}

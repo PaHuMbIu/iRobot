@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+@mixin slider-nav-btn() {
+    &.slider_nav {
+        position: absolute;
+        z-index: 1000;
+
+        @include mix.flex-center(center, center);
+        background-color: map-get(vars.$background-colors, bg-secondary);
+        border-radius: 100%;
+        width: 55px;
+        height: 55px;
+
+        cursor: pointer;
+    }
+
+    &.slider_nav_prev {
+        top: 45%;
+        left: 0;
+    }
+
+    &.slider_nav_next {
+        top: 45%;
+        right: 0;
+    }
+
+    .slider_btn {
+        width: 11px;
+        height: 11px;
+        border-top: 2px solid #6a768c;
+        border-right: 2px solid #6a768c;
+        cursor: pointer;
+    }
+
+    .slider_btn_prev {
+        transform: rotate(-135deg);
+        margin-left: 3px;
+    }
+
+    .btn_next {
+        transform: rotate(45deg);
+        margin-right: 3px;
+    }
+
+}

@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
 .slider_marketing {
     display: flex;
     justify-content: center;

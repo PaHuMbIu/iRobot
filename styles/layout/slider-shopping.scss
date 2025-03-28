@@ -1,8 +1,8 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
 .slider_shopping {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0 40px 50px 40px;
+    padding: 0 20px 20px 20px;
 }
 
 .slider_shopping_container {
@@ -22,39 +22,18 @@
 }
 
 .slider_shopping_wrapper {
-    flex-grow: 0;
     flex-shrink: 0;
     flex-basis: calc((100% - 3 * 20px) / 4);
-
+    box-sizing: content-box;
     padding-right: 20px;
-}
-
-.slider_shopping_wrapper > a {
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-    user-drag: none;
-    user-select: none;
 }
 
 .slide_shopping {
     width: 100%;
     height: auto;
-
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-    user-drag: none;
-    user-select: none;
 }
 
 @media screen and (max-width: 1024px) {
-
-    .slider_shopping {
-        padding: 0 0 50px 0;
-    }
 
     .slider_shopping_wrapper {
         flex-basis: calc((100% - 2 * 20px) / 3);

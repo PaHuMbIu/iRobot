@@ -1,0 +1,105 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+.video_section {
+    padding: 0 20px 60px 20px;
+}
+
+.slider_header {
+    @include mix.text-style(bigger, semibold, color-secondary, center);
+    margin-bottom: 20px;
+}
+
+.videos_container {
+    overflow: hidden;
+}
+
+.slider_video_track {
+    display: flex;
+    touch-action: pan-y;
+}
+
+.video_card {
+    position: relative;
+
+    @include mix.flex-center(center, stretch);
+
+    flex-shrink: 0;
+    flex-basis: calc(100% / 3);
+
+    padding: 0 10px 0 10px;
+
+    video {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #000000;
+    }
+}
+
+.content_block {
+    position: absolute;
+    text-align: center;
+    padding: 70px;
+    pointer-events: none;
+}
+
+.video_caption {
+    @include mix.text-style(bigger, semibold, color-tertiary, center);
+}
+
+.price {
+    @include mix.text-style(large, regular, color-tertiary, center);
+    padding: 15px 0;
+}
+
+.content_block > a {
+    @include mix.text-style(large, regular, color-tertiary, center);
+    border-bottom: 1px solid #ffffff;
+    pointer-events: auto;
+}
+
+.video_pagination_circles {
+    display: none !important;
+}
+
+@media screen and (max-width: 1440px) {
+
+    .content_block {
+        padding: 40px;
+    }
+
+    .video_caption {
+        @include mix.text-style(medium-large, semibold, color-tertiary, center);
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .slider_video_track {
+        transition: transform .5s;
+        margin-bottom: 35px;
+    }
+
+    .video_card {
+        flex-shrink: 0;
+        flex-basis: calc(100% / 2);
+    }
+
+    .video_pagination_circles {
+        display: flex !important;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .slider_header {
+        @include mix.text-style(medium-large, semibold, color-secondary, center);
+    }
+
+    .video_card {
+        flex-basis: 100%;
+    }
+
+}

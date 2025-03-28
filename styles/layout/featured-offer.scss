@@ -1,21 +1,17 @@
 @use "../abstracts/variables" as vars;
 @use "../abstracts/mixins" as mix;
+@use "../components/tag" as tag;
 
 .featured_offer {
     position: relative;
-
     display: flex;
-    width: 100%;
-    height: 100%;
-
-    margin-bottom: 52px;
-
+    margin-bottom: 20px;
     cursor: pointer;
 }
 
 .featured_banner_desktop {
     object-fit: cover;
-    height: 726px;
+    height: 700px;
     width: 100%;
 }
 
@@ -26,58 +22,38 @@
 .offer_content {
     position: absolute;
 
-    display: flex;
+    @include mix.flex-center(center, stretch);
     flex-direction: column;
-    justify-content: center;
-    width: clamp(100px, 100%, 608px);
-    height: 726px;
+    width: clamp(100px, 100%, 600px);
+    height: 100%;
 
     padding-left: 120px;
 }
 
-.offer_tag_container {
-    width: clamp(60px, 100%, 165px);
+.featured_tag {
+    @include tag.tag(150px);
 }
 
 .offer_header {
-    font-size: 48px;
-    color: #ffffff;
-
-    margin: 0 0 18px 0;
+    @include mix.text-style(bigger, semibold, color-tertiary);
+    padding: 20px 0;
 }
 
 .offer_description {
-    font-size: 16px;
-    font-weight: 500;
-    color: #ffffff;
-
+    @include mix.text-style(large, regular, color-tertiary);
     margin-bottom: 20px;
 }
 
 .cta_link {
-    font-size: 15px;
-    font-weight: 600;
-    color: #ffffff;
-    text-decoration: none;
-
     width: fit-content;
+    @include mix.text-style(large, semibold, color-tertiary);
     border-bottom: 1px solid #657e6e;
-    padding-bottom: 2px;
 }
 
 @media screen and (max-width: 1024px) {
 
     .offer_content {
         padding-left: 30px;
-    }
-
-    .offer_header {
-        font-size: 33px;
-        width: clamp(100px, 100%, 420px);
-    }
-
-    .offer_description {
-        width: clamp(100px, 100%, 400px);
     }
 
 }
@@ -99,33 +75,26 @@
 
     .offer_content {
         position: static;
-
-        justify-content: flex-start;
         width: 100%;
-        height: fit-content;
+        padding: 20px;
 
-        padding: 30px 20px 16px 20px;
-        box-sizing: border-box;
-    }
-
-    .offer_content::after {
-        content: '';
-        border-bottom: 2px solid #e2e3e6;
-        padding-top: 20px;
+        &.offer_content::after {
+            content: '';
+            border-bottom: 2px solid #e2e3e6;
+            padding-top: 20px;
+        }
     }
 
     .offer_header {
-        color: #343A40;
-        width: 100%;
+        @include mix.text-style(medium-large, semibold, color-secondary);
     }
 
     .offer_description {
-        width: 100%;
-        color: #343A40;
+        @include mix.text-style(normal, regular, color-secondary);
     }
 
     .cta_link {
-        color: #447355;
+        @include mix.text-style(normal, semibold, color-accent);
     }
 
 }

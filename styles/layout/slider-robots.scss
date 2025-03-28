@@ -1,0 +1,94 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+@use "../components/slider-nav-btn" as nav-btn;
+@use "../components/pagination-circle" as circle;
+
+.slider_robots {
+    @include mix.flex-center(stretch, center);
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+.slider_robots_container {
+    position: relative;
+    width: clamp(414px, 100%, 1200px);
+    margin-bottom: 45px;
+    overflow: hidden;
+}
+
+.slider_nav {
+    @include nav-btn.slider-nav-btn;
+}
+
+.slider_robots_track {
+    display: flex;
+    padding: 0 15px;
+    transition: transform .5s;
+    touch-action: pan-y;
+}
+
+.slider_robot_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    flex-shrink: 0;
+    flex-basis: calc((100% - 2 * 20px) / 3);
+
+    padding-right: 20px;
+    box-sizing: content-box;
+}
+
+.slide_robot {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.slide_content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    @include mix.text-style(medium, semibold, color-primary);
+}
+
+.slide_description {
+    @include mix.text-style(large, regular, color-primary);
+    line-height: 1.5;
+}
+
+.slide_action {
+    width: fit-content;
+    border-bottom: 1px solid #447355;
+    @include mix.text-style(large, semibold, color-accent);
+    pointer-events: auto;
+}
+
+.slider_pagination {
+    @include circle.pagination-circle;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .slider_nav {
+        display: none !important;
+    }
+
+    .slider_robot_wrapper {
+        flex-basis: calc((100% - 20px) / 2);
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .slider_robots_container {
+        width: clamp(100px, 100%, 680px);
+    }
+
+    .slider_robot_wrapper {
+        flex-basis: 100%;
+    }
+
+}
