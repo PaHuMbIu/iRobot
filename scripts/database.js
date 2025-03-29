@@ -63,42 +63,42 @@ export const robotSlidesData = [
 
 export const shoppingSlidesData = [
     {
-        imgSrc: "/iRobot/assets/sliderShopping/60Day.webp",
+        imgSrc: "/iRobot/assets/slider-shopping/60Day.webp",
         alt: "60-Day Return Policy"
     },
     {
-        imgSrc: "/iRobot/assets/sliderShopping/free.webp",
+        imgSrc: "/iRobot/assets/slider-shopping/free.webp",
         alt: "Free Shipping"
     },
     {
-        imgSrc: "/iRobot/assets/sliderShopping/price.webp",
+        imgSrc: "/iRobot/assets/slider-shopping/price.webp",
         alt: "Price Match Guarantee"
     },
     {
-        imgSrc: "/iRobot/assets/sliderShopping/iExpert.webp",
+        imgSrc: "/iRobot/assets/slider-shopping/iExpert.webp",
         alt: "iRobot iExpert Support"
     },
     {
-        imgSrc: "/iRobot/assets/sliderShopping/Affirm.webp",
+        imgSrc: "/iRobot/assets/slider-shopping/Affirm.webp",
         alt: "Affirm Payment Option",
         link: "#"
     },
     {
-        imgSrc: "/iRobot/assets/sliderShopping/pay.webp",
+        imgSrc: "/iRobot/assets/slider-shopping/pay.webp",
         alt: "Pay Your Way"
     },
     {
-        imgSrc: "/iRobot/assets/sliderShopping/Trade.webp",
+        imgSrc: "/iRobot/assets/slider-shopping/Trade.webp",
         alt: "iRobot Trade-in Program",
         link: "#"
     },
     {
-        imgSrc: "/iRobot/assets/sliderShopping/Warranty.webp",
+        imgSrc: "/iRobot/assets/slider-shopping/Warranty.webp",
         alt: "iRobot Warranty",
         link: "#"
     },
     {
-        imgSrc: "/iRobot/assets/sliderShopping/iRobot.webp",
+        imgSrc: "/iRobot/assets/slider-shopping/iRobot.webp",
         alt: "Email Sign-up for Offers"
     }
 ];
