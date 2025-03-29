@@ -1,7 +1,7 @@
 export const robotSlidesData = [
     {
         title: "Click to Shop Roomba Combo® j9+",
-        imgSrc: "./assets/slider_robots/RoombaCombo_j9%20_Photo_Lifestyle_Entryway_Girl_Dog_1500x1500.webp",
+        imgSrc: "/assets/slider_robots/RoombaCombo_j9%20_Photo_Lifestyle_Entryway_Girl_Dog_1500x1500.webp",
         alt: "robot",
         rating: "★★★★★",
         quote: "Whenever I see my Robot has cleaned, I'm happy!",
@@ -11,7 +11,7 @@ export const robotSlidesData = [
     },
     {
         title: "Click to Shop Roomba Combo® i5+",
-        imgSrc: "./assets/slider_robots/Roomba_Combo_i5+_Holiday23_Static_Banner_Full_Width_Deals%20Page_1500x1500.webp",
+        imgSrc: "/assets/slider_robots/Roomba_Combo_i5+_Holiday23_Static_Banner_Full_Width_Deals%20Page_1500x1500.webp",
         alt: "robot",
         rating: "★★★★★",
         quote: "Must Have Product!",
@@ -21,7 +21,7 @@ export const robotSlidesData = [
     },
     {
         title: "Click to Shop Roomba Combo® 10 Max",
-        imgSrc: "./assets/slider_robots/RoombaCombo_10Max_AutoWash_Photo_Lifestyle_Dinner_DirtDetect_3000x3000.webp",
+        imgSrc: "/assets/slider_robots/RoombaCombo_10Max_AutoWash_Photo_Lifestyle_Dinner_DirtDetect_3000x3000.webp",
         alt: "robot",
         rating: "★★★★★",
         quote: "Invest in Roomba 10 for a clean home!",
@@ -31,7 +31,7 @@ export const robotSlidesData = [
     },
     {
         title: "Click to Shop Roomba Combo® j9+",
-        imgSrc: "./assets/slider_robots/Homepage_RoombaCombo_j9plus_Web_PDP_Carousel_2000x2000.webp",
+        imgSrc: "/assets/slider_robots/Homepage_RoombaCombo_j9plus_Web_PDP_Carousel_2000x2000.webp",
         alt: "robot",
         rating: "★★★★★",
         quote: "King of Clean Floors",
@@ -41,7 +41,7 @@ export const robotSlidesData = [
     },
     {
         title: "Click to Shop Roomba® j9+",
-        imgSrc: "./assets/slider_robots/NA_Roomba_j9+_j9_Web_PDP_Carousel_iRobotOS_3000x3000.webp",
+        imgSrc: "/assets/slider_robots/NA_Roomba_j9+_j9_Web_PDP_Carousel_iRobotOS_3000x3000.webp",
         alt: "robot",
         rating: "★★★★★",
         quote: "Life changing",
@@ -51,7 +51,7 @@ export const robotSlidesData = [
     },
     {
         title: "Click to Shop Roomba Combo® j5+",
-        imgSrc: "./assets/slider_robots/RoombaCombo_j5_j5+_Photo_InSitu_Mopping_2000x2000.webp",
+        imgSrc: "/assets/slider_robots/RoombaCombo_j5_j5+_Photo_InSitu_Mopping_2000x2000.webp",
         alt: "robot",
         rating: "★★★★★",
         quote: "Blown away",
@@ -63,57 +63,57 @@ export const robotSlidesData = [
 
 export const shoppingSlidesData = [
     {
-        imgSrc: "./assets/slider_shopping/60_Day_Return_Image_Tile_3000x2000.webp",
+        imgSrc: "/assets/slider_shopping/60_Day_Return_Image_Tile_3000x2000.webp",
         alt: "60-Day Return Policy"
     },
     {
-        imgSrc: "./assets/slider_shopping/roomba-free-shipping-4499.webp",
+        imgSrc: "/assets/slider_shopping/roomba-free-shipping-4499.webp",
         alt: "Free Shipping"
     },
     {
-        imgSrc: "./assets/slider_shopping/Price_Match_Image_Tile_3000x2000.webp",
+        imgSrc: "/assets/slider_shopping/Price_Match_Image_Tile_3000x2000.webp",
         alt: "Price Match Guarantee"
     },
     {
-        imgSrc: "./assets/slider_shopping/iRobot_iExpert_Image_Tile_3000x2000.webp",
+        imgSrc: "/assets/slider_shopping/iRobot_iExpert_Image_Tile_3000x2000.webp",
         alt: "iRobot iExpert Support"
     },
     {
-        imgSrc: "./assets/slider_shopping/Affirm_Image_Tile_3000x2000.webp",
+        imgSrc: "/assets/slider_shopping/Affirm_Image_Tile_3000x2000.webp",
         alt: "Affirm Payment Option",
         link: "#"
     },
     {
-        imgSrc: "./assets/slider_shopping/Pay_your_way_Image_Tile_3000x2000.webp",
+        imgSrc: "/assets/slider_shopping/Pay_your_way_Image_Tile_3000x2000.webp",
         alt: "Pay Your Way"
     },
     {
-        imgSrc: "./assets/slider_shopping/iRobot_Trade_in_Image_Tile_purple_3000x2000.webp",
+        imgSrc: "/assets/slider_shopping/iRobot_Trade_in_Image_Tile_purple_3000x2000.webp",
         alt: "iRobot Trade-in Program",
         link: "#"
     },
     {
-        imgSrc: "./assets/slider_shopping/iRobot_Warranty_Image_Tile_3000x2000.webp",
+        imgSrc: "/assets/slider_shopping/iRobot_Warranty_Image_Tile_3000x2000.webp",
         alt: "iRobot Warranty",
         link: "#"
     },
     {
-        imgSrc: "./assets/slider_shopping/iRobot_Email_Sign_up_Image_Tile_3000x2000.webp",
+        imgSrc: "/assets/slider_shopping/iRobot_Email_Sign_up_Image_Tile_3000x2000.webp",
         alt: "Email Sign-up for Offers"
     }
 ];
 
 export const marketingSlidesData = [
     {
-        imgSrc: "./assets/slider_marketing/Testimonial_Banner_EditorsChoice_PCMag_Desktop_Essential_3000x1500.webp",
+        imgSrc: "/assets/slider_marketing/Testimonial_Banner_EditorsChoice_PCMag_Desktop_Essential_3000x1500.webp",
         alt: "PCMag Editors' Choice Testimonial"
     },
     {
-        imgSrc: "./assets/slider_marketing/desktop-web-ICMI-Award-3000x1500.jpg",
+        imgSrc: "/assets/slider_marketing/desktop-web-ICMI-Award-3000x1500.jpg",
         alt: "ICMI Award"
     },
     {
-        imgSrc: "./assets/slider_marketing/desktop-web-editors-choice_3000x1500.jpg",
+        imgSrc: "/assets/slider_marketing/desktop-web-editors-choice_3000x1500.jpg",
         alt: "Desktop Web Editors' Choice Award"
     }
 ];
