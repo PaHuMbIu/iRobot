@@ -1,4 +1,4 @@
-const updateVideoEls = () => {
+export const updateVideoEls = () => {
     const videoEls = [...document.querySelectorAll('.video')];
     const playPauseBtnEls = [...document.querySelectorAll('.play_pause_btn')];
     const playEls = [...document.querySelectorAll('.play')];

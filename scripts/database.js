@@ -1,4 +1,4 @@
-const robotSlidesData = [
+export const robotSlidesData = [
     {
         title: "Click to Shop Roomba Combo® j9+",
         imgSrc: "assets/slider_robots/RoombaCombo_j9%20_Photo_Lifestyle_Entryway_Girl_Dog_1500x1500.webp",
@@ -61,7 +61,7 @@ const robotSlidesData = [
     }
 ];
 
-const shoppingSlidesData = [
+export const shoppingSlidesData = [
     {
         imgSrc: "assets/slider_shopping/60_Day_Return_Image_Tile_3000x2000.webp",
         alt: "60-Day Return Policy"
@@ -103,7 +103,7 @@ const shoppingSlidesData = [
     }
 ];
 
-const marketingSlidesData = [
+export const marketingSlidesData = [
     {
         imgSrc: "assets/slider_marketing/Testimonial_Banner_EditorsChoice_PCMag_Desktop_Essential_3000x1500.webp",
         alt: "PCMag Editors' Choice Testimonial"
@@ -117,4 +117,3 @@ const marketingSlidesData = [
         alt: "Desktop Web Editors' Choice Award"
     }
 ];
-renderSlides();

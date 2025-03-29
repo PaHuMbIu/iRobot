@@ -1,3 +1,8 @@
+import { robotSlidesData } from "./database.js";
+import { shoppingSlidesData } from "./database.js";
+import { marketingSlidesData } from "./database.js";
+import { updateVideoEls } from "./video-section.js";
+
 const renderSlides = () => {
     const sliderRobotWrapperEl = document.querySelector('.slider_robots_track > template');
     const sliderShoppingWrapperEl = document.querySelector('.slider_shopping_track > template');
@@ -378,3 +383,4 @@ const getRenderSlides = () => {
         sliderTrackEls: sliderTrackEls,
     });
 };
+renderSlides();
