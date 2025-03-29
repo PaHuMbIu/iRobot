@@ -1,7 +1,7 @@
 export const robotSlidesData = [
     {
         title: "Click to Shop Roomba Combo® j9+",
-        imgSrc: "./slider_robots/RoombaComboJ9.webp",
+        imgSrc: "/iRobot/assets/slider_robots/RoombaComboJ9.webp",
         alt: "robot",
         rating: "★★★★★",
         quote: "Whenever I see my Robot has cleaned, I'm happy!",
@@ -11,7 +11,7 @@ export const robotSlidesData = [
     },
     {
         title: "Click to Shop Roomba Combo® i5+",
-        imgSrc: "./slider_robots/RoombaComboI5.webp",
+        imgSrc: "/iRobot/assets/slider_robots/RoombaComboI5.webp",
         alt: "robot",
         rating: "★★★★★",
         quote: "Must Have Product!",
@@ -21,7 +21,7 @@ export const robotSlidesData = [
     },
     {
         title: "Click to Shop Roomba Combo® 10 Max",
-        imgSrc: "./slider_robots/AutoWash.webp",
+        imgSrc: "/iRobot/assets/slider_robots/AutoWash.webp",
         alt: "robot",
         rating: "★★★★★",
         quote: "Invest in Roomba 10 for a clean home!",
@@ -31,7 +31,7 @@ export const robotSlidesData = [
     },
     {
         title: "Click to Shop Roomba Combo® j9+",
-        imgSrc: "./slider_robots/RoombaCombo.webp",
+        imgSrc: "/iRobot/assets/slider_robots/RoombaCombo.webp",
         alt: "robot",
         rating: "★★★★★",
         quote: "King of Clean Floors",
@@ -41,7 +41,7 @@ export const robotSlidesData = [
     },
     {
         title: "Click to Shop Roomba® j9+",
-        imgSrc: "./slider_robots/iRobotOS.webp",
+        imgSrc: "/iRobot/assets/slider_robots/iRobotOS.webp",
         alt: "robot",
         rating: "★★★★★",
         quote: "Life changing",
@@ -51,7 +51,7 @@ export const robotSlidesData = [
     },
     {
         title: "Click to Shop Roomba Combo® j5+",
-        imgSrc: "./slider_robots/RoombaComboJ6.webp",
+        imgSrc: "/iRobot/assets/slider_robots/RoombaComboJ6.webp",
         alt: "robot",
         rating: "★★★★★",
         quote: "Blown away",
@@ -63,57 +63,57 @@ export const robotSlidesData = [
 
 export const shoppingSlidesData = [
     {
-        imgSrc: "./slider_shopping/60Day.webp",
+        imgSrc: "/iRobot/assets/slider_shopping/60Day.webp",
         alt: "60-Day Return Policy"
     },
     {
-        imgSrc: "./slider_shopping/free.webp",
+        imgSrc: "/iRobot/assets/slider_shopping/free.webp",
         alt: "Free Shipping"
     },
     {
-        imgSrc: "./slider_shopping/price.webp",
+        imgSrc: "/iRobot/assets/slider_shopping/price.webp",
         alt: "Price Match Guarantee"
     },
     {
-        imgSrc: "./slider_shopping/iExpert.webp",
+        imgSrc: "/iRobot/assets/slider_shopping/iExpert.webp",
         alt: "iRobot iExpert Support"
     },
     {
-        imgSrc: "./slider_shopping/Affirm.webp",
+        imgSrc: "/iRobot/assets/slider_shopping/Affirm.webp",
         alt: "Affirm Payment Option",
         link: "#"
     },
     {
-        imgSrc: "./slider_shopping/pay.webp",
+        imgSrc: "/iRobot/assets/slider_shopping/pay.webp",
         alt: "Pay Your Way"
     },
     {
-        imgSrc: "./slider_shopping/Trade.webp",
+        imgSrc: "/iRobot/assets/slider_shopping/Trade.webp",
         alt: "iRobot Trade-in Program",
         link: "#"
     },
     {
-        imgSrc: "./slider_shopping/Warranty.webp",
+        imgSrc: "/iRobot/assets/slider_shopping/Warranty.webp",
         alt: "iRobot Warranty",
         link: "#"
     },
     {
-        imgSrc: "./slider_shopping/iRobot.webp",
+        imgSrc: "/iRobot/assets/slider_shopping/iRobot.webp",
         alt: "Email Sign-up for Offers"
     }
 ];
 
 export const marketingSlidesData = [
     {
-        imgSrc: "./slider_marketing/essential.webp",
+        imgSrc: "/iRobot/assets/slider_marketing/essential.webp",
         alt: "PCMag Editors' Choice Testimonial"
     },
     {
-        imgSrc: "./slider_marketing/award.jpg",
+        imgSrc: "/iRobot/assets/slider_marketing/award.jpg",
         alt: "ICMI Award"
     },
     {
-        imgSrc: "./slider_marketing/editor-choice.jpg",
+        imgSrc: "/iRobot/assets/slider_marketing/editor-choice.jpg",
         alt: "Desktop Web Editors' Choice Award"
     }
 ];

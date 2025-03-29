@@ -1,2 +1,4 @@
 import { defineConfig } from 'vite';
-export default defineConfig({ base: "/iRobot/" });
+export default defineConfig({
+    base: "/iRobot/",
+});
